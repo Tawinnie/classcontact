@@ -24,7 +24,17 @@ if ($connect->connect_error) {
 
 $sql = "SELECT * FROM phonebook";
 $result = $connect->query($sql);
-echo json_encode($result);
+if ($result->num_rows > 0) {
+    // output data of each row
+    while ($row = $result->fetch_assoc()) {
+        $id = $row["pid"];
+        $name = $row["pname"];
+        $phone = $row["pphoned"];
+        echo "Name: " .  $name . "- Phone: " . $phone . "<br>";
+    }
+} else { 
+    echo "0 results";
+}
 ?>
 </body>
 
