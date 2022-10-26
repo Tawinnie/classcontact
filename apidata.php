@@ -9,10 +9,6 @@
 </head>
 
 <body>
-    <a href="Index.php">Add Your Contact</a><br>
-</body>
-
-</html>
 <?php
 $servername = "localhost";
 $username = "root";
@@ -29,3 +25,7 @@ if ($connect->connect_error) {
 $sql = "SELECT * FROM phonebook";
 $result = $connect->query($sql);
 echo json_encode($result);
+?>
+</body>
+
+</html>
