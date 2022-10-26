@@ -10,7 +10,7 @@
     <?php
 
 
-    $connect = mysqli_connect("localhost", "root", "", "class_contact_mgt");
+    $connect = mysqli_connect("us-cdbr-east-06.cleardb.net", "be939ffb871918", "87cca276", "heroku_b87a9cd1fc84562");
 
     // Checking connection
     if ($connect === false) {
